@@ -6,14 +6,14 @@ class Blog::PostsController < Blog::BaseController
 	POSTS_PER_PAGE = 5
 	
 	def rss
-		@posts = Post.limit(5).order("created_at DESC")
+		@posts = Blog::Post.limit(5).order("created_at DESC")
 	end
 	
 	def index
 		if @current_user && @current_user.is_admin
-			@posts = Post.limit(5).includes(:tags, :user).order("created_at DESC")
+			@posts = Blog::Post.limit(5).includes(:tags, :user).order("created_at DESC")
 		else
-			@posts = Post.where(:published=>true).order("created_at DESC").limit(5).includes(:tags, :user)
+			@posts = Blog::Post.where(:published=>true).order("created_at DESC").limit(5).includes(:tags, :user)
 		end
 		@page_title = "Home"
 		render 'list'
@@ -25,16 +25,16 @@ class Blog::PostsController < Blog::BaseController
 	
 	def index_page
 		if @current_user && @current_user.is_admin
-			@posts = Post.offset(params[:page].to_i*POSTS_PER_PAGE).limit(POSTS_PER_PAGE).includes(:tags, :user).order("created_at DESC")
+			@posts = Blog::Post.offset(params[:page].to_i*POSTS_PER_PAGE).limit(POSTS_PER_PAGE).includes(:tags, :user).order("created_at DESC")
 		else
-			@posts = Post.where(:published=>true).order("created_at DESC").offset(params[:page].to_i*POSTS_PER_PAGE).limit(POSTS_PER_PAGE).includes(:tags, :user)
+			@posts = Blog::Post.where(:published=>true).order("created_at DESC").offset(params[:page].to_i*POSTS_PER_PAGE).limit(POSTS_PER_PAGE).includes(:tags, :user)
 		end
 		@page_title = "Home - Page #{params[:page].to_i}"
 		render 'list'
 	end
 	
 	def create
-		@post = Post.new(params[:blog_post])
+		@post = Blog::Post.new(params[:blog_post])
 		@post.user = @current_user
 		respond_to do |format|
 			if @post.save
@@ -46,7 +46,7 @@ class Blog::PostsController < Blog::BaseController
 	end
 	
 	def new
-		@post = Post.new
+		@post = Blog::Post.new
 	end
 	
 	def edit
@@ -80,7 +80,7 @@ class Blog::PostsController < Blog::BaseController
 	
 	protected
 	def get_post
-		@post = Post.find(params[:id], :include=>[:tags, :user])
+		@post = Blog::Post.find(params[:id], :include=>[:tags, :user])
 		#check that the provided slug matches the post's slug, perma redirect if not
 		#EXCEPT IF HEADING TO EDIT!
 		if params[:slug]!=nil && params[:slug]!=@post.slug

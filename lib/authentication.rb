@@ -26,7 +26,7 @@ module Authentication
 	end
 	
 	def login_from_cookie()
-		user = cookies[:auth_token] && User.exists?({:auth_token=>cookies[:auth_token]}) && User.find_by_auth_token(cookies[:auth_token])
+		user = cookies[:auth_token] && Blog::User.exists?({:auth_token=>cookies[:auth_token]}) && Blog::User.find_by_auth_token(cookies[:auth_token])
 		if user && user.auth_token?
 			if user.current_ip != request.remote_ip
 				user = nil
@@ -38,7 +38,7 @@ module Authentication
 	end
 	
 	def login_from_session()
-		user = session[:user_id] && User.exists?(session[:user_id]) && User.find(session[:user_id])
+		user = session[:user_id] && Blog::User.exists?(session[:user_id]) && Blog::User.find(session[:user_id])
 		if user
 			if user.current_ip != request.remote_ip
 				#login fail
@@ -54,7 +54,7 @@ module Authentication
 	# havoc with forgery protection, and is only strictly necessary on login.
 	# However, **all session state variables should be unset here**.
 	def logout_keeping_session!
-		@current_user.forget_me! if @current_user.is_a? User
+		@current_user.forget_me! if @current_user.is_a? Blog::User
 		@current_user = false     # not logged in, and don't do it for me
 		session[:user_id] = nil   # keeps the session but kill our variable
 		cookies[:auth_token] = nil

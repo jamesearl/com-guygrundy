@@ -16,9 +16,9 @@
 	
 	<div class="social">
 		<div class="soc date">Share this:</div> 
-		<%=render :partial=>'shared/twitter_tweet'%>
-		<%=render :partial=>'shared/google_plus1'%>
-		<%=render :partial=>'shared/facebook_like'%>
+		<%=render :partial=>'blog/shared/twitter_tweet'%>
+		<%=render :partial=>'blog/shared/google_plus1'%>
+		<%=render :partial=>'blog/shared/facebook_like'%>
 	</div>
 	
 
@@ -27,7 +27,7 @@
 	</div>
 	
 	<div class="tags">
-		<%=render post.tags%>
+		<%=render :partial=>'blog/tags/tag', :collection=>post.tags%>
 	</div>
 
 	<div class="comments">

@@ -1,12 +1,10 @@
 
 $(document).observe('dom:loaded', function(){
-
-		
 				
 		$$('form input[type=text]')[0].activate();
 		
-		var pt = $('post_title');
-		var ps = $('post_slug');
+		var pt = $('blog_post_title');
+		var ps = $('blog_post_slug');
 					
 		new Form.Element.Observer(pt
 			, .33

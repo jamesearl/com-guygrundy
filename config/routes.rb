@@ -14,14 +14,14 @@ ComGuygrundy::Application.routes.draw do
 	
 	scope :blog, :constraints => {:subdomain=> 'blog'} do
 		#POSTS
-		match '/posts' 									=> 'blog/posts#index', 				:via=>:get, 	:as=>:posts
+		match '/posts' 									=> 'blog/posts#index', 				:via=>:get, 	:as=>:blog_posts
 		match '/posts/page/:page'				=> 'blog/posts#index_page',		:via=>:get,		:as=>:posts_page, :constraints => {:page => /\d+/}
 		match '/posts' 									=> 'blog/posts#create', 				:via=>:post
 		match '/rss' 										=> "blog/posts#rss", 												:as=>:rss
 		match '/posts/new' 							=> 'blog/posts#new', 					:via=>:get
 		match '/posts/:id/edit' 				=> 'blog/posts#edit',  				:via=>:get, 	:as=>:edit_post, 	:constraints => {:id => /\d+/}
-		match '/posts/:id/*slug'				=> 'blog/posts#show', 					:via=>:get, 	:as=>:post_slug, 	:constraints => {:id => /\d+/}
-		match '/posts/:id'							=> 'blog/posts#show',					:via=>:get,		:as=>:post, 			:constraints => {:id => /\d+/}
+		match '/posts/:id/*slug'				=> 'blog/posts#show', 					:via=>:get, 	:as=>:blog_post_slug, 	:constraints => {:id => /\d+/}
+		match '/posts/:id'							=> 'blog/posts#show',					:via=>:get,		:as=>:blog_post, 			:constraints => {:id => /\d+/}
 		match '/posts/:id' 							=> 'blog/posts#update',  			:via=>:put, 										:constraints => {:id => /\d+/}
 		match '/posts/:id' 							=> 'blog/posts#destroy', 			:via=>:delete, 									:constraints => {:id => /\d+/}
 		#match 'posts/:id/edit/title'	=> 'blog/posts#update_title', 	:via=>:post

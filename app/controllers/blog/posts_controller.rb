@@ -34,7 +34,7 @@ class Blog::PostsController < Blog::BaseController
 	end
 	
 	def create
-		@post = Post.new(params[:post])
+		@post = Post.new(params[:blog_post])
 		@post.user = @current_user
 		respond_to do |format|
 			if @post.save
@@ -57,7 +57,7 @@ class Blog::PostsController < Blog::BaseController
 	
 	def update
 		respond_to do |format|
-			if @post.update_attributes(params[:post])
+			if @post.update_attributes(params[:blog_post])
 				format.html {redirect_to edit_post_url(@post), :notice=> "Post successfully updated."}
 			else
 				format.html {render :action=>"edit"}

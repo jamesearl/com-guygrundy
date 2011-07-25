@@ -2,13 +2,13 @@ class Blog::SessionsController < Blog::BaseController
 	before_filter :disable_tracking
 	
 	def new
-		@user = User.new
+		@user = Blog::User.new
 		@page_title = "Login"
 	end
 
 	def create
 		return unless check_params
-		@user = User.authenticate(params[:user][:email], params[:user][:password])
+		@user = Blog::User.authenticate(params[:blog_user][:email], params[:blog_user][:password])
 		if @user
 			reset_session
 			
@@ -34,7 +34,7 @@ class Blog::SessionsController < Blog::BaseController
 	protected
 
 	def check_params
-		if params[:user][:email].empty? or params[:user][:password].empty?
+		if params[:blog_user][:email].empty? or params[:blog_user][:password].empty?
 			flash[:error] = "Login failed"
 			redirect_to :action=>:new
 			return false

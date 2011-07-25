@@ -10,6 +10,6 @@
 	<%=render 'form'%>
 
 	<div>
-		<%=link_to 'view', post_slug_url(:id=>@post.id, :slug=>@post.slug)%>
+		<%=link_to 'view', blog_post_slug_url(:id=>@post.id, :slug=>@post.slug)%>
 	</div>
 <%end%>

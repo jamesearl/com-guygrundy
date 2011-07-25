@@ -1,12 +1,12 @@
 
 <%=content_for :main do%>
 	<div>
-		Displaying all posts tagged with #<%=@tag.name%>
+		Displaying all posts tagged with [#<%=@tag.name%>]
 	</div>
 <%end%>
 
 <%=content_for :main do%>
-	<%=render :template=>'posts/list'%>
+	<%=render :template=>'blog/posts/list'%>
 <%end%>
 
 

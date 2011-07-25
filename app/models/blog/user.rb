@@ -24,7 +24,7 @@ class Blog::User < ActiveRecord::Base
 	
 	def self.authenticate(try_email, try_password)
     return nil if try_email.blank? || try_password.blank?
-		u = User.find_by_email(try_email.downcase)
+		u = find_by_email(try_email.downcase)
 		u && u.authenticated?(try_password) ? u : nil
   end
   

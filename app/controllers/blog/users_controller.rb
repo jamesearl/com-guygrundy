@@ -9,6 +9,6 @@ class Blog::UsersController < Blog::BaseController
 	protected
 	
 	def find_user
-		@user = User.find(params[:id])
+		@user = Blog::User.find(params[:id])
 	end
 end

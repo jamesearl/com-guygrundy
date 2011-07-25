@@ -13,13 +13,13 @@
 ActiveRecord::Schema.define(:version => 20110607164856) do
 
   create_table "posts", :force => true do |t|
-    t.string   "title"
-    t.string   "slug"
-    t.text     "body"
-    t.boolean  "published"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
+    t.string    "title"
+    t.string    "slug"
+    t.text      "body"
+    t.boolean   "published"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "user_id"
   end
 
   create_table "posts_tags", :id => false, :force => true do |t|
@@ -28,22 +28,22 @@ ActiveRecord::Schema.define(:version => 20110607164856) do
   end
 
   create_table "tags", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password"
-    t.string   "salt"
-    t.boolean  "is_admin"
-    t.string   "auth_token"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "current_ip"
-    t.string   "alias"
+    t.string    "name"
+    t.string    "email"
+    t.string    "password"
+    t.string    "salt"
+    t.boolean   "is_admin"
+    t.string    "auth_token"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "current_ip"
+    t.string    "alias"
   end
 
 end

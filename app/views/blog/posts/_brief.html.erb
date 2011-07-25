@@ -20,6 +20,6 @@
 	</div>
 	
 	<div class="tags">
-		<%=render post.tags%>
+		<%=render :partial=>'blog/tags/tag', :collection=>post.tags%>
 	</div>
 </div>

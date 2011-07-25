@@ -1,0 +1,12 @@
+
+<%=content_for :main do%>
+	<div>
+		Displaying all posts by user <%=@user.alias%>
+	</div>
+<%end%>
+
+<%=content_for :main do%>
+	<%=render :template=>'posts/list'%>
+<%end%>
+
+

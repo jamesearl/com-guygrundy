@@ -1,0 +1,25 @@
+
+<div class="post brief">
+	<p class="title">
+		<%if @current_user && @current_user.is_admin%>
+			<%if !post.published%>
+				(draft)
+			<%end%>
+			(<%=link_to 'edit', edit_post_path(post.id)%>)
+		<%end%>
+		<%=link_to post.title, :controller=>'posts', :action=>'show', :id=>post.id, :slug=>post.slug%>
+	</p>
+
+	<p class="date">
+		by <%=link_to post.user.alias, user_posts_url(post.user)%> on <%=post.created_at.strftime("%m/%d/%Y at %I:%M%p")%>
+	</p>
+	
+	<div class="body">
+		<%=sanitize(truncate(post.body, :length=>500), :tags=>%w(p))%>
+		<%=link_to "[more]", :controller=>'posts', :action=>'show', :id=>post.id, :slug=>post.slug%>
+	</div>
+	
+	<div class="tags">
+		<%=render post.tags%>
+	</div>
+</div>

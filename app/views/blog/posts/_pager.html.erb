@@ -1,0 +1,16 @@
+
+<div id="pager">
+
+	<%if @posts.length==5%>
+	<div class="left">
+		<%=link_to '< older', posts_page_url(:page=>(params[:page] || 0).to_i+1)%>
+	</div>
+	<%end%>
+	
+	<%if (params[:page] || 0).to_i > 0%>
+	<div class="right">
+		<%=link_to 'newer >', posts_page_url(:page=>(params[:page] || 1).to_i-1)%>
+	</div>
+	<%end%>
+	
+</div>

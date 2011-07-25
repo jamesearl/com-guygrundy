@@ -1,0 +1,15 @@
+<div id="footer">
+	<div class="copyright">
+		&#169;2011 
+		<%if DateTime.now.year > 2011%>
+			- <%=DateTime.now.year%>
+		<%end%>
+		<a href="http://guygrundy.com">GuyGrundy.com</a>
+	</div>
+	<div class="rss">
+		<%=link_to 'RSS', rss_url%>
+	</div>
+	<div class="ehj">
+		built by <%=link_to 'einherj.ar.com', 'http://einherj.ar.com/'%>
+	</div>
+</div>

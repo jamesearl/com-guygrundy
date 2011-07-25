@@ -1,0 +1,11 @@
+
+<%#if @current_user && @current_user.is_admin%>
+	<%#=content_for :script do%>
+		<%#=javascript_include_tag 'effects'%>
+		<%#=javascript_include_tag 'controls'%>
+		<%#=javascript_include_tag 'posts'%>
+	<%#end%>
+<%#end%>
+<%=content_for :main do%>
+	<%=render @post%>
+<%end%>

@@ -1,0 +1,86 @@
+html { background-color: #000000; color:#EEEEEE; font-family: Verdana; font-size:11pt; }
+
+body { padding: 5px; }
+
+a { color:#EEEEEE; font-family:Verdana; }
+a:visited { color:#EEEEEE; }
+a:hover { color:#9F0002; }
+
+hr { color: #777777; }
+
+.red { color: #9F0002; }
+
+
+div.flash { padding:.8em; margin:10px auto 10px auto; border:2px solid #ddd; width: 90%; }
+div.flash_error { background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4; }
+div.flash_notice { background:#FFF6BF;color:#514721;border-color:#FFD324; }
+div.flash_success { background:#E6EFC2;color:#264409;border-color:#C6D880; }
+div.flash_error a { color:#8a1f11; }
+div.flash_notice a { color:#514721; }
+div.flash_success a { color:#264409; }
+
+/* LAYOUT */
+div#layout { padding-left: 133px; }
+div#layout-left { margin-left: -133px; width: 133px; }
+div#layout-right { width: 100%; }
+div.content { margin-right: 10px; }
+
+/* BORDERS */
+div.backborder { z-index: -1; height:100%; width:133px; position: absolute; top:0; }
+div.leftborder { left:0; background-image: url('/images/film_strip_home_stitched.jpg'); }
+/*div.rightborder { right:0; background-image: url('/images/film_strip_home_2.jpg'); }*/
+
+
+div#logo, div#logo h1 a{ font-family: ttf1942report; color: #999999; text-decoration:none; }
+div#logo h1 { font-size: 55px; }
+
+
+div#main { padding: 30px 0 10px 0; }
+
+div#nav { font-size: 20px; height: 30px; }
+div#nav ul { float:right; }
+div#nav ul li { font-family: ttf1942report; color:#9F0002; float:left; margin:0 10px 0 0; border-bottom: solid 1px #777777; }
+div#nav ul li a { font-family: ttf1942report; text-decoration:none; color: #9F0002; }
+div#nav ul li a:hover { color: #CCCCCC; border:none; }
+
+div#footer { padding:40px 0 0 0; width: 100%; clear: both; }
+div#footer div{ float:right; margin: 0 10px 0 0; }
+
+div#main div {  }
+div#main div h2 { font-weight: bold; color: #9F0002; font-size: 25px; font-weight: normal; margin: 0 0 10px 0; }
+div#main div div {  }
+div#main span { color: #9F0002; font-weight: bold; }
+div#main span.white { color: #FFFFFF; }
+
+div#about { padding-left: 300px; }
+div#about div.left { margin-left:-300px; width:300px; }
+div#about img { width: 270px; height: 375px; }
+div#about p { line-height: 150%; margin:0 0 10px 0;}
+
+div#news div.news { margin:0 0 10px 10px; clear: both; width: 100%; min-height:40px; }
+div#news div.news img { float:right; padding: 10px; width:130px; }
+div#news div.news img.left { float:left; }
+
+div#reel div.reel { margin:0 0 40px 10px; }
+div#reel div.reel span { float:left; }
+div#reel div.reel a { display:block; clear:right; margin-left: 200px; }
+
+div#biography div { margin:0 0 20px 10px; clear:both; padding: 10px 0 0 0; }
+div#biography div img { float: left; margin: 0 30px 0 30px; }
+div#biography div img.right { float: right; }
+
+div#resume div { margin:0 0 40px 10px; }
+div#resume div span { float:left; }
+div#resume div p { display:block; clear:right; margin-left: 200px; }
+
+div#photos div { margin:0 0 40 10px; }
+div#photos div span {  }
+div#photos div a { display:inline; float:left; }
+div#photos div a img { height:100px; margin:7px 7px 7px 7px; vertical-align:top; border:solid 1px transparent;}
+div#photos div a img:hover { border-bottom:solid 1px #333333; border-right: solid 1px #333333; }
+
+div#contact { height: 400px; }
+
+
+
+

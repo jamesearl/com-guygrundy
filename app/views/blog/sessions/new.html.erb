@@ -1,0 +1,15 @@
+
+
+<%= content_for :main do %>
+	<div id="login">
+		<%= form_for @user, :url=>{ :controller=>:sessions, :action=>:create } do |f| %>
+			<%=f.label :email-%>
+			<%=f.text_field :email-%>
+			<br/>
+			<%=f.label :password-%>
+			<%=f.password_field :password-%>
+			<br/>
+			<%=f.submit 'submit'-%>
+		<% end %>
+	</div>
+<% end %>

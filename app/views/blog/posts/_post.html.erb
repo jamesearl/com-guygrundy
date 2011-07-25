@@ -1,0 +1,36 @@
+
+<div id="post">
+	<p class="title">
+		<%if @current_user && @current_user.is_admin%>
+			<%if !post.published%>
+				(draft)
+			<%end%>
+			(<%=link_to 'edit', edit_post_path(post.id)%>)
+		<%end%>
+		<%=post.title%> 
+	</p>
+	
+	<p class="date">
+		by <%=link_to @post.user.alias, user_posts_url(@post.user)%> on <%=post.created_at.strftime("%m/%d/%Y at %I:%M%p")%> 
+	</p>
+	
+	<div class="social">
+		<div class="soc date">Share this:</div> 
+		<%=render :partial=>'shared/twitter_tweet'%>
+		<%=render :partial=>'shared/google_plus1'%>
+		<%=render :partial=>'shared/facebook_like'%>
+	</div>
+	
+
+	<div class="body">
+		<%==post.body%>
+	</div>
+	
+	<div class="tags">
+		<%=render post.tags%>
+	</div>
+
+	<div class="comments">
+		<%=render :partial=>'disqus', :object=>post%>
+	</div>
+</div>

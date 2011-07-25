@@ -1,0 +1,8 @@
+<%content_for :main do%>
+	<div class="posts">
+		<%=render :partial=>'blog/posts/brief', :collection=>@posts, :as=>:post%>
+	</div>
+
+	<%=render 'pager'%>
+
+<%end%>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guy Grundy</title>
+  
+  <%= stylesheet_link_tag 'http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css'%>
+  <%= stylesheet_link_tag 'http://yui.yahooapis.com/3.3.0/build/cssgrids/grids-min.css'%>
+  <%= stylesheet_link_tag :all %>
+  <%= yield :style %>
+
+  <%#=auto_discovery_link_tag :rss, rss_url%>
+  
+	<%#= javascript_include_tag 'https://www.google.com/jsapi?key=ABQIAAAAzWy_AXBCGAJi9MBpiXoskhSZ6nIPyTu1O-MEsrPRgN_hFeje7xQToBMSsu6kIPNTY6svOV7Ex4-epQ'%>
+	<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js' %>
+	<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js' %>
+  
+  <%= javascript_include_tag 'application' %>
+  <%= yield :script %>
+  
+  <%= render 'shared/tracking'%>
+  
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<div class="yui3-g" id="layout">
+		<div class="yui3-u" id="layout-left">
+			<div class="leftborder backborder"></div>
+		</div>
+		
+		<div class="yui3-u" id="layout-right">
+		
+			<div class="yui3-g">
+			
+				<div class="yui3-u-3-8">
+					<div class="content">
+						<%= render 'shared/logo'%>
+					</div>
+				</div>
+				<div class="yui3-u-5-8">
+					<div class="content">
+						<%= render 'shared/navigation'%>
+					</div>
+				</div>
+			</div>
+			
+			<div class="yui3-g">
+				
+				<div class="yui3-u">
+					<div class="content">
+						<%==show_flash%>
+						
+						<div id="main">
+							<%= yield :main%>
+						</div>
+						
+						<%= render 'shared/footer'%>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+</body>
+</html>

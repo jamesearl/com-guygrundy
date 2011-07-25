@@ -6,7 +6,7 @@ class Blog::TagsController < Blog::BaseController
   end
 
   def show
-  	@tag = Tag.find(params[:id], :include=>:posts)
+  	@tag = Blog::Tag.find(params[:id], :include=>:posts)
   	@posts = @tag.posts
   	@page_title = "Posts Tagged ##{@tag.name}"
   end

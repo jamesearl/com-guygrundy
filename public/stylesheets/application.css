@@ -9,7 +9,7 @@
     font-style: normal;
 }
 
-html { background-color: #000000; color:#EEEEEE; font-family: Verdana; font-size:12px; }
+html { background-color: #000000; color:#EEEEEE; font-family: Verdana; font-size:12px; line-height:auto; }
 a { color:#EEEEEE; font-family:Verdana; }
 a:visited { color:#EEEEEE; }
 a:hover { color:#9F0002; }

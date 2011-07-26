@@ -15,7 +15,7 @@
 	<%#= javascript_include_tag 'https://www.google.com/jsapi?key=ABQIAAAAzWy_AXBCGAJi9MBpiXoskhSZ6nIPyTu1O-MEsrPRgN_hFeje7xQToBMSsu6kIPNTY6svOV7Ex4-epQ'%>
 	<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js' %>
 	<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js' %>
-  
+  <%= javascript_include_tag 'https://apis.google.com/js/plusone.js'%>
   <%= javascript_include_tag 'www' %>
   <%= yield :script %>
   
@@ -24,6 +24,8 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+	<%= render 'shared/navigation'%>
+	
 	<div class="yui3-g" id="layout">
 		<div class="yui3-u" id="layout-left">
 			<div class="leftborder backborder"></div>
@@ -32,7 +34,6 @@
 		<div class="yui3-u" id="layout-right">
 		
 			<div class="yui3-g">
-			
 				<div class="yui3-u-3-8">
 					<div class="content">
 						<%= render 'www/shared/logo'%>
@@ -40,7 +41,7 @@
 				</div>
 				<div class="yui3-u-5-8">
 					<div class="content">
-						<%= render 'www/shared/navigation'%>
+						
 					</div>
 				</div>
 			</div>
@@ -55,7 +56,7 @@
 							<%= yield :main%>
 						</div>
 						
-						<%= render 'www/shared/footer'%>
+						
 					</div>
 				</div>
 			</div>
@@ -63,5 +64,7 @@
 		</div>
 		
 	</div>
+	
+	<%= render 'shared/subdomain_navigation'%>
 </body>
 </html>

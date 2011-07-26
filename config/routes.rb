@@ -42,7 +42,10 @@ ComGuygrundy::Application.routes.draw do
 	end
 	
 	scope :training, :constraints => {:subdomain=>'training'} do
-			
+		
+		match '/biography' 	=> 'training/biography#index'
+		match '/contact' 		=> 'training/contact#index'
+		
 	end
 	
 	root :to => 'www/about#index', :constraints => { :subdomain => 'www' }
@@ -51,4 +54,8 @@ ComGuygrundy::Application.routes.draw do
 	
 	#root :to => redirect {|p, req| "www.#{req.domain(2)}" }
 	root :to => 'www/about#index'
+	
+	
+	
+	
 end

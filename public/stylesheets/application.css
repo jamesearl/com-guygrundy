@@ -8,3 +8,57 @@
     font-weight: normal;
     font-style: normal;
 }
+
+html { background-color: #000000; color:#EEEEEE; font-family: Verdana; font-size:12px; }
+a { color:#EEEEEE; font-family:Verdana; }
+a:visited { color:#EEEEEE; }
+a:hover { color:#9F0002; }
+
+body { padding: 5px; }
+
+hr { color: #777777; }
+
+.red { color: #9F0002; }
+
+div.flash { padding:.8em; margin:10px auto 10px auto; border:2px solid #ddd; width: 90%; }
+div.flash_error { background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4; }
+div.flash_notice { background:#FFF6BF;color:#514721;border-color:#FFD324; }
+div.flash_success { background:#E6EFC2;color:#264409;border-color:#C6D880; }
+div.flash_error a { color:#8a1f11; }
+div.flash_notice a { color:#514721; }
+div.flash_success a { color:#264409; }
+
+h1 { font-family: 'ttf1942report'; font-size:40px; }
+h2 { font-family: 'ttf1942report'; font-size: 22px; font-weight:bold; margin:0 0 10px 0; }
+
+/* LAYOUT */
+div#layout { margin-top:0px; padding-left: 133px; }
+div#layout-left { margin-left: -133px; width: 133px; }
+div#layout-right { width: 100%; }
+div.content { margin-right: 10px; }
+
+/* BORDERS */
+div.backborder { z-index: -1; height:100%; width:133px; position: absolute; top:0; }
+div.leftborder { left:0; background-image: url('/images/film_strip_home_stitched.jpg'); }
+/*div.rightborder { right:0; background-image: url('/images/film_strip_home_2.jpg'); }*/
+
+/* NAVIGATION */
+div.nav { font-size: 20px; height: 25px; position:absolute; top:0; left:0; width:100%; z-index:0; }
+div.nav ul { float:right; clear:right; }
+div.nav ul li { font-family: ttf1942report; color:#FFFFFF; float:left; margin:0 10px 0 0; font-size:20px; }
+div.nav ul li a { font-family: ttf1942report; text-decoration:none; color: #9F0002; border-bottom: solid 1px #777777; font-size:20px; }
+div.nav ul li a:hover { color: #CCCCCC; border:none; }
+
+div.nav.subdomain { position:fixed; bottom:0; top:auto; height:30px; font-size:22px; background-color:#333333; border-top:solid 4px #222222; }
+div.nav.subdomain ul li { color:#777777; }
+div.nav.subdomain ul li a { border-bottom: solid 0px #777777; }
+
+/* LOGO */
+div#logo, div#logo h1 a{ font-family: 'ttf1942report'; color: #999999; text-decoration:none; }
+div#logo h1 { font-size: 55px; }
+div#logo { z-index: 1 }
+
+/* FOOTER */
+div#footer { margin:5px 0 0 0; font-size: 11px; width:100%; }
+div#footer div{ float:left; margin: 0 0 0 0; padding:0 10px 0 10px; border-right: solid 1px #777777; height: 18px; vertical-align:middle; }
+div#footer img { width:18px; height:18px; }

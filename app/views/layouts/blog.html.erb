@@ -26,6 +26,7 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+	<%= render 'shared/navigation'%>
 
 	<div class="yui3-g" id="layout">
 		<div class="yui3-u" id="layout-left">
@@ -38,7 +39,7 @@
 					<%= render 'blog/shared/logo'%>
 				</div>
 				<div class="yui3-u-1-2">
-					<%= render 'blog/shared/navigation'%>
+					
 				</div>
 			</div>
 		
@@ -58,11 +59,12 @@
 			
 			<div class="yui3-g">
 				<div class="yui3-u">
-					<%= render 'blog/shared/footer'%>
+					<%#= render 'blog/shared/footer'%>
 				</div>
 			</div>
 		</div>
 	</div>
 		
+	<%= render 'shared/subdomain_navigation'%>
 </body>
 </html>

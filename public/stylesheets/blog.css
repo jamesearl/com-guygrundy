@@ -1,41 +1,21 @@
-html { background-color: #000000; color:#EEEEEE; font-family: Verdana; font-size:14px; }
-
-a { color:#EEEEEE; font-family:Verdana; }
-a:visited { color:#EEEEEE; }
-a:hover { color:#9F0002; }
-
-body { padding: 5px; }
-
-hr { color: #777777; }
-
-h1 { font-family: 'ttf1942report'; font-size:40px; }
-h2 { font-family: 'ttf1942report'; font-size: 22px; font-weight:bold; margin:0 0 10px 0; }
-
-.red { color: #9F0002; }
 
 /* LAYOUT */
-div#layout { padding-left: 133px; }
-div#layout-left { margin-left: -133px; width: 133px; }
-div#layout-right { width: 100%; }
-div.content { margin-right: 10px; padding-top:10px; }
-
-/* BORDERS */
-div.backborder { z-index: -1; height:100%; width:133px; position: absolute; top:0; }
-div.leftborder { left:0; background-image: url('/images/film_strip_home_stitched.jpg'); }
-/*div.rightborder { right:0; background-image: url('/images/film_strip_home_2.jpg'); }*/
-
+div.content { padding-top:10px; }
 
 /* HEAD */
+/*
 div#head div#logo { font-family: 'ttf1942report'; font-size:40px; margin: 0 0 0 10px; }
 div#head div#logo h1 a { font-family: inherit; text-decoration:none; }
 div#head div#logo h1 a:hover { color:#EEEEEE; }
+*/
 
+/*
 div#head div#nav { font-size: 20px; height: 30px; margin:0 10px 0 0; }
 div#head div#nav ul { float:right; }
 div#head div#nav ul li { font-family: 'ttf1942report'; color:#9F0002; float:left; margin:0 10px 0 0; border-bottom: solid 1px #777777; }
 div#head div#nav ul li a { font-family: 'ttf1942report'; text-decoration:none; color: #9F0002; }
 div#head div#nav ul li a:hover { color: #CCCCCC; border:none; }
-
+*/
 
 /* MAIN */
 div#main { }
@@ -52,7 +32,7 @@ div#post .date { color:#AAAAAA; }
 div#post .date a { color: #AAAAAA; }
 div#post .date a:hover { color: #9F0002; }
 div#post p.tags { }
-div#post div.body { margin:7px 0 7px 10px; }
+div#post div.body { margin:7px 0 7px 10px; font-size:14px; }
 div#post div.body strong { font-weight:bold; }
 div#post div.body em { font-style:italic; }
 div#post div.body p { margin: 5px 0 0 0; }
@@ -63,7 +43,7 @@ div#post div.social div.soc { float:left; margin-right:10px; }
 div#post div.comments p.title { margin-top:15px; }
 
 div#posts {  }
-div#posts div.post { margin: 0 0 10px 0; padding: 15px; background-color: #252525; border: solid 1px #252525; }
+div#posts div.post { margin: 0 0 10px 0; padding: 15px; background-color: #252525; border: solid 1px #252525; font-size:14px; }
 div#posts div.post:hover { border: solid 1px #333333; }
 div#posts div.post p.title { font-weight: bold; }
 div#posts div.post p.title a { text-decoration: none; }
@@ -83,16 +63,12 @@ div#login { margin: 0 auto; }
 
 div#sidebar { }
 div#sidebar div { background-color: #252525; padding: 10px; }
-div#sidebar div#author { border-bottom: solid 1px #333333; }
+div#sidebar div#author { border-bottom: solid 1px #333333; font-size:14px; }
 div#sidebar div#author img { float:right; margin:0 0 5px 10px; }
 div#sidebar div#social { border-bottom: solid 1px #333333; }
 div#sidebar div#recentcomments { border-bottom: solid 1px #333333; }
 div#sidebar div#sidebarads div { text-align:center; }
 
-/* FOOTER */
-
-div#footer { margin:2em 0 0 0; }
-div#footer div{ float:left; margin: 0 0 0 0; padding:0 10px 0 10px; border-right: solid 1px #777777; }
 
 div.flash { padding:.8em; margin:10px auto 10px auto; border:2px solid #ddd; width: 90%; }
 div.flash_error { background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4; }

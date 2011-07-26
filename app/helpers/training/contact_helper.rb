@@ -1,0 +1,2 @@
+module Training::ContactHelper
+end

@@ -1,51 +1,12 @@
-html { background-color: #000000; color:#EEEEEE; font-family: Verdana; font-size:11pt; }
 
-body { padding: 5px; }
-
-a { color:#EEEEEE; font-family:Verdana; }
-a:visited { color:#EEEEEE; }
-a:hover { color:#9F0002; }
-
-hr { color: #777777; }
-
-.red { color: #9F0002; }
-
-
-div.flash { padding:.8em; margin:10px auto 10px auto; border:2px solid #ddd; width: 90%; }
-div.flash_error { background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4; }
-div.flash_notice { background:#FFF6BF;color:#514721;border-color:#FFD324; }
-div.flash_success { background:#E6EFC2;color:#264409;border-color:#C6D880; }
-div.flash_error a { color:#8a1f11; }
-div.flash_notice a { color:#514721; }
-div.flash_success a { color:#264409; }
-
-/* LAYOUT */
-div#layout { padding-left: 133px; }
-div#layout-left { margin-left: -133px; width: 133px; }
-div#layout-right { width: 100%; }
-div.content { margin-right: 10px; }
-
-/* BORDERS */
-div.backborder { z-index: -1; height:100%; width:133px; position: absolute; top:0; }
-div.leftborder { left:0; background-image: url('/images/film_strip_home_stitched.jpg'); }
-/*div.rightborder { right:0; background-image: url('/images/film_strip_home_2.jpg'); }*/
-
-
+/*
 div#logo, div#logo h1 a{ font-family: ttf1942report; color: #999999; text-decoration:none; }
 div#logo h1 { font-size: 55px; }
+*/
 
+h2 { font-family:Verdana }
 
-div#main { padding: 30px 0 10px 0; }
-
-div#nav { font-size: 20px; height: 30px; }
-div#nav ul { float:right; }
-div#nav ul li { font-family: ttf1942report; color:#9F0002; float:left; margin:0 10px 0 0; border-bottom: solid 1px #777777; }
-div#nav ul li a { font-family: ttf1942report; text-decoration:none; color: #9F0002; }
-div#nav ul li a:hover { color: #CCCCCC; border:none; }
-
-div#footer { padding:40px 0 0 0; width: 100%; clear: both; }
-div#footer div{ float:right; margin: 0 10px 0 0; }
-
+div#main { padding: 30px 0 10px 0; font-size:15px; }
 div#main div {  }
 div#main div h2 { font-weight: bold; color: #9F0002; font-size: 25px; font-weight: normal; margin: 0 0 10px 0; }
 div#main div div {  }
@@ -80,7 +41,4 @@ div#photos div a img { height:100px; margin:7px 7px 7px 7px; vertical-align:top;
 div#photos div a img:hover { border-bottom:solid 1px #333333; border-right: solid 1px #333333; }
 
 div#contact { height: 400px; }
-
-
-
 

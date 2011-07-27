@@ -1,4 +1,4 @@
-class Training::BiographyController < ApplicationController
+class Training::BiographyController < Training::BaseController
   def index
   end
 

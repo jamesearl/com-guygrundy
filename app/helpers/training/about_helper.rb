@@ -1,0 +1,2 @@
+module Training::AboutHelper
+end

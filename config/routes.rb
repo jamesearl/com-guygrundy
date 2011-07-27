@@ -45,7 +45,7 @@ ComGuygrundy::Application.routes.draw do
 		
 		match '/biography' 	=> 'training/biography#index'
 		match '/contact' 		=> 'training/contact#index'
-		
+		match '/about' 			=> 'training/about#index'
 	end
 	
 	root :to => 'www/about#index', :constraints => { :subdomain => 'www' }

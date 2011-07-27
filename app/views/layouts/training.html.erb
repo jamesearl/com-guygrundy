@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- training subdomain -->
+  <title>Guy Grundy - Training<%=@page_title.blank? ? "" : " - #{@page_title}"%></title>
+  
+  <%= stylesheet_link_tag 'http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css'%>
+  <%= stylesheet_link_tag 'http://yui.yahooapis.com/3.3.0/build/cssgrids/grids-min.css'%>
+  <%= stylesheet_link_tag 'application'%>
+  <%= stylesheet_link_tag 'training' %>
+  <%= yield :style %>
+
+	<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js' %>
+	<%#= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js' %>
+  <%= javascript_include_tag 'https://apis.google.com/js/plusone.js'%>
+  <%#= javascript_include_tag 'training' %>
+  <%= yield :script %>
+  
+  <%= render 'training/shared/tracking'%>
+  
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+	<%=render 'shared/header'%>
+
+	<%=render 'shared/social'%>
+	
+	<div class="yui3-g" id="layout">
+	
+		<div class="yui3-u">
+			<div class="content">
+				<%==show_flash%>
+				<%= yield :main%>
+			</div>
+		</div>
+		
+	</div>
+	
+	<%= render 'shared/subdomain_navigation'%>
+</body>
+</html>

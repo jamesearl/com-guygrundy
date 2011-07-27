@@ -1,4 +1,4 @@
-class Training::ContactController < ApplicationController
+class Training::ContactController < Training::BaseController
   def index
   end
 

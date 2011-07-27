@@ -1,5 +1,4 @@
 class Blog::BaseController < ApplicationController
-  protect_from_forgery
   include Authentication
   include Authorization
   

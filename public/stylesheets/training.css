@@ -6,7 +6,10 @@ div#header ul { float:right; margin: 20px 10px 0 0; }
 div#header ul li { float:left; margin:0 3px 0 3px; font-family:'ttf1942report'; font-size:20px; color:#777777; }
 div#header ul li a { font-family: 'ttf1942report'; font-size: 20px; text-decoration:none; }
 
-div#social { position:fixed; left:0; top:50%; }
+div#social { position:fixed; left:0; top:50%; margin-top:-113px; width:70px; text-align:center; }
+div#social div { margin:10px auto 10px auto; }
+div#social div#fb-counter { padding-left:7px; }
+div#social div#g-plus { padding-left:3px; }
 
 div#layout { padding:0; margin: 56px auto 30px auto; width:800px; background-color:#333333; border-left: solid 4px #222222; border-right:solid 4px #222222; }
 div#layout div.content {  }

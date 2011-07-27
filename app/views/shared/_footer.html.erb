@@ -11,6 +11,8 @@
 		built by <%=link_to 'einherj.ar.com', 'http://einherj.ar.com/'%>
 	</div>
 	
+	<%if request.subdomain != 'training'%>
+	
 	<div class="fb">
 		<a href="https://www.facebook.com/profile.php?id=833653760" target="_blank">
 			<img src="/images/icons/facebook.png" alt="Guy Grundy on Facebook" />
@@ -28,4 +30,5 @@
 		<%#=<img src="/images/icons/google.png" alt="+1 this page on Google" />%>
 	</div>
 	
+	<%end%>
 </div>

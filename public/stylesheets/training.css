@@ -19,7 +19,7 @@ div#contact a { display:inline-block; width: 70px; height:70px; }
 div#contact a img { width:60px; height:60px; margin:5px; text-align:center; vertical-align:middle; }
 
 div#bio { padding:20px; }
-div#bio div.body div { min-height:150px; }
+div#bio div.body div { min-height:140px; padding:10px 0 10px 0; }
 div#bio div.body div a { float:left; height:150px; padding:0 10px 0 10px; }
 div#bio div.body div a img { height:140px; }
 div#bio div.body div a.right { float:right; }

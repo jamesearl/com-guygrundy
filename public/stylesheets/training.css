@@ -11,9 +11,15 @@ div#social div { margin:10px auto 10px auto; }
 div#social div#g-plus { padding-left:3px; }
 div#social div#fb-counter { padding-left:7px; }
 
-div#layout { padding:0; margin: 46px auto 30px auto; width:800px; background-color:#333333; border-left: solid 4px #222222; border-right:solid 4px #222222; }
+div#layout { padding:0; margin: 46px auto 29px auto; width:800px; background-color:#333333; border-left: solid 4px #222222; border-right:solid 4px #222222; }
 div#layout div.content {  }
 
 div#contact { }
 div#contact a { display:inline-block; width: 70px; height:70px; }
 div#contact a img { width:60px; height:60px; margin:5px; text-align:center; vertical-align:middle; }
+
+div#bio { padding:20px; }
+div#bio div.body div { min-height:150px; }
+div#bio div.body div a { float:left; height:150px; padding:0 10px 0 10px; }
+div#bio div.body div a img { height:140px; }
+div#bio div.body div a.right { float:right; }

@@ -1,8 +1,17 @@
 
 
+<%=content_for :style do%>
+	<style type="text/css">
+		#layout { border-bottom: solid 8px #222222; }
+	</style>
+<%end%>
+
 <%=content_for :main do %>
 
 <div id="contact">
+	<p>
+		You can contact me for training, or anything else, via the following links:
+	</p>
 
 	<a href="https://www.facebook.com/profile.php?id=833653760">
 		<img src="/images/icons/facebook.png" alt="Guy Grundy on Facebook" /></a>
@@ -11,7 +20,7 @@
 		<img src="/images/icons/twitter.png" alt="Guy Grundy on Twitter" /></a>
 	
 	<a href="mailto:guy@guygrundy.com">
-		<img src="/images/icons/email.png" alt="Email Guy Grundy" /></a>
+		<img src="/images/icons/email.png" alt="Email Guy Grundy" style="width:66px; height:66px; margin:2px;" /></a>
 		
 </div>
 

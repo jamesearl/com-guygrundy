@@ -4,9 +4,11 @@
 	<ul>
 		<li><%=unless request.subdomain=='www' then link_to('acting', root_url(:host=>'www.'+request.domain+request.port_string)) else 'acting' end%></li>
 		<li>-</li>
-		
+
+		<%if request.subdomain=='training' %><!-- this is a temporary check to prevent navigation to this subdomain. remove for live -->
 		<li><%=unless request.subdomain=='training' then link_to('training', root_url(:host=>'training.'+request.domain+request.port_string)) else 'training' end%></li>
 		<li>-</li>
+		<%end%>
 		
 		<li><%=unless request.subdomain=='blog' then link_to_unless_current('blog', root_url(:host=>'blog.'+request.domain+request.port_string)) else 'blog' end%></li>
 	</ul>

@@ -60,6 +60,11 @@ div#logo, div#logo h1 a.red { color:inherit; }
 div#logo h1 { font-size: 55px; }
 div#logo { z-index: 1 }
 
+/* BROWSER COMPATIBILITY MODULE */
+div#browser-compat { position:fixed; right:0; bottom: 34px; width:15%; }
+div#browser-compat div { padding: 10px; }
+
+
 /* FOOTER */
 div#footer { margin:5px 0 0 0; font-size: 11px; width:100%; }
 div#footer div{ float:left; margin: 0 0 0 0; padding:0 10px 0 10px; border-right: solid 1px #777777; height: 18px; vertical-align:middle; }

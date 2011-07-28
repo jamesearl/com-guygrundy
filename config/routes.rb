@@ -1,7 +1,5 @@
 ComGuygrundy::Application.routes.draw do
 	
-  get "resume/index"
-
 	scope :www, :constraints => {:subdomain => 'www'} do
 	
 		match '/about' 			=> 'www/about#index'
@@ -45,9 +43,11 @@ ComGuygrundy::Application.routes.draw do
 	
 	scope :training, :constraints => {:subdomain=>'training'} do
 		
-		match '/biography' 	=> 'training/biography#index'
-		match '/contact' 		=> 'training/contact#index'
-		match '/about' 			=> 'training/about#index'
+		match '/biography' 	=> 'training/biography#index',	:as=>:training_biography
+		match '/contact' 		=> 'training/contact#index',		:as=>:training_contact
+		match '/about' 			=> 'training/about#index',			:as=>:training_about
+		match '/resume'			=> 'training/resume#index', 		:as=>:training_resume
+		
 	end
 	
 	root :to => 'www/about#index', :constraints => { :subdomain => 'www' }

@@ -16,9 +16,9 @@ div#layout div.content {  }
 
 div#page-title { font-family: 'ttf1942report'; font-size:20px; color:#777777; float:left; text-transform:lowercase; width:100%; height:40px; }
 
-div#about { padding:20px; width:100%; }
+div#about { padding:20px; }
 
-div#contact { padding:20px; width:100%; text-align:center; }
+div#contact { padding:20px; text-align:center; }
 div#contact p { margin:70px auto 20px auto; }
 div#contact a { display:inline-block; width: 70px; height:70px; margin:10px; }
 div#contact a:hover { background-color:#393939; }
@@ -29,3 +29,9 @@ div#bio div.body div { min-height:140px; padding:10px 0 10px 0; }
 div#bio div.body div a { float:left; height:150px; padding:0 10px 0 10px; }
 div#bio div.body div a img { height:140px; }
 div#bio div.body div a.right { float:right; }
+
+div#resume { padding:20px; }
+div#resume div { margin:0 0 20px 0; }
+div#resume div h4 { font-weight:bold; font-size:14px; }
+div#resume div ul { }
+div#resume div ul li { list-style:disc outside; margin:0 0 0 15px; }

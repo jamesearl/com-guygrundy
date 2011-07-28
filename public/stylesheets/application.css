@@ -19,6 +19,7 @@ body { padding: 5px; }
 hr { color: #777777; }
 
 .red { color: #9F0002; }
+a.red { color: #9F0002; }
 
 div.flash { padding:.8em; margin:10px auto 10px auto; border:2px solid #ddd; width: 90%; }
 div.flash_error { background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4; }
@@ -55,6 +56,7 @@ div.nav.subdomain ul li a { border-bottom: solid 0px #777777; }
 
 /* LOGO */
 div#logo, div#logo h1 a{ font-family: 'ttf1942report'; color: #999999; text-decoration:none; }
+div#logo, div#logo h1 a.red { color:inherit; }
 div#logo h1 { font-size: 55px; }
 div#logo { z-index: 1 }
 

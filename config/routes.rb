@@ -1,5 +1,7 @@
 ComGuygrundy::Application.routes.draw do
 	
+  get "resume/index"
+
 	scope :www, :constraints => {:subdomain => 'www'} do
 	
 		match '/about' 			=> 'www/about#index'

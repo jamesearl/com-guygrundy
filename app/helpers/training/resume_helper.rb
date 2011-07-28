@@ -1,0 +1,2 @@
+module Training::ResumeHelper
+end

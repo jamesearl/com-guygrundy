@@ -32,6 +32,20 @@ div.flash_success a { color:#264409; }
 h1 { font-family: 'ttf1942report'; font-size:40px; }
 h2 { font-family: 'ttf1942report'; font-size: 22px; font-weight:bold; margin:0 0 10px 0; }
 
+/* HEADER */
+div#header { position:fixed; top:0; left:0; width:100%; background-color:#333333; border-bottom:solid 8px #222222; }
+div#header div#logo { float:left; color:#9F0002; }
+div#header div#logo h1 { font-size: 45px; }
+div#header ul { float:right; margin: 20px 10px 0 0; }
+div#header ul li { float:left; margin:0 3px 0 3px; font-family:'ttf1942report'; font-size:20px; color:#777777; }
+div#header ul li a { font-family: 'ttf1942report'; font-size: 20px; text-decoration:none; /*color:#9F0002;*/ }
+
+/* SOCIAL MODULE */
+div#social { position:fixed; left:0; top:50%; margin-top:-153px; width:80px; text-align:center; }
+div#social div { margin:10px auto 10px auto; }
+div#social div#g-plus { padding-left:3px; }
+div#social div#fb-counter { padding-left:7px; }
+
 /* LAYOUT */
 div#layout { margin-top:0px; padding-left: 133px; }
 div#layout-left { margin-left: -133px; width: 133px; }

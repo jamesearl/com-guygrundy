@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ComGuygrundy</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+	<!-- <%=request.subdomain%> subdomain -->
+  <title>Guy Grundy - Training<%=@page_title.blank? ? "" : " - #{@page_title}"%></title>
+  
+  <%= stylesheet_link_tag 'http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css'%>
+  <%= stylesheet_link_tag 'http://yui.yahooapis.com/3.3.0/build/cssgrids/grids-min.css'%>
+  <%= stylesheet_link_tag 'application'%>
+  <%= stylesheet_link_tag "#{request.subdomain}" %>
+  <%= yield :style %>
+
+	<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js' %>
+	<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js' %>
+  <%= javascript_include_tag 'https://apis.google.com/js/plusone.js'%>
+  <%= javascript_include_tag "#{request.subdomain}" %>
+  <%= yield :script %>
+  
+  <%= render 'shared/tracking'%>
+  
   <%= csrf_meta_tag %>
 </head>
 <body>
 
-<%= yield %>
+	<%=render 'shared/header'%>
 
+	<%=render 'shared/social'%>
+	
+	<div class="yui3-g" id="layout">
+	
+		<%= content_for?(:content) ? yield :content : yield%>
+	
+		<div class="yui3-u-1">
+			<div class="content">
+				<div id="page-title"><%=@page_title%></div>
+				<%==show_flash%>
+				<%= yield :main%>
+			</div>
+		</div>
+		
+	</div>
+	
+	<%= render 'shared/browser_compat'%>
+	
+	<%= render 'shared/subdomain_navigation'%>
 </body>
 </html>

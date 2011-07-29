@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- training subdomain -->
+	<!-- <%=request.subdomain%> subdomain -->
   <title>Guy Grundy - Training<%=@page_title.blank? ? "" : " - #{@page_title}"%></title>
   
   <%= stylesheet_link_tag 'http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css'%>
   <%= stylesheet_link_tag 'http://yui.yahooapis.com/3.3.0/build/cssgrids/grids-min.css'%>
   <%= stylesheet_link_tag 'application'%>
-  <%= stylesheet_link_tag 'training' %>
+  <%= stylesheet_link_tag "#{request.subdomain}" %>
   <%= yield :style %>
 
 	<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js' %>
-	<%#= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js' %>
+	<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js' %>
   <%= javascript_include_tag 'https://apis.google.com/js/plusone.js'%>
   <%#= javascript_include_tag 'training' %>
   <%= yield :script %>
   
-  <%= render 'training/shared/tracking'%>
+  <%= render 'shared/tracking'%>
   
   <%= csrf_meta_tag %>
 </head>
@@ -43,3 +43,10 @@
 	<%= render 'shared/subdomain_navigation'%>
 </body>
 </html>
+
+
+<%=content_for :content do %>
+
+<%end%>
+
+<%=render :layout=>'layouts/application'%>

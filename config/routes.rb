@@ -50,6 +50,10 @@ ComGuygrundy::Application.routes.draw do
 		
 	end
 	
+	# SHARED PAGES
+	match '/contact'		=> 'contact#index', :as=>:contact
+	
+	
 	root :to => 'www/about#index', :constraints => { :subdomain => 'www' }
 	root :to => 'blog/posts#index', :constraints => { :subdomain => 'blog' }
 	root :to => 'training/about#index', :constraints => { :subdomain => 'training' }

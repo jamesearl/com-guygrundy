@@ -1,22 +1,4 @@
 
-/* LAYOUT */
-div.content { padding-top:10px; }
-
-/* HEAD */
-/*
-div#head div#logo { font-family: 'ttf1942report'; font-size:40px; margin: 0 0 0 10px; }
-div#head div#logo h1 a { font-family: inherit; text-decoration:none; }
-div#head div#logo h1 a:hover { color:#EEEEEE; }
-*/
-
-/*
-div#head div#nav { font-size: 20px; height: 30px; margin:0 10px 0 0; }
-div#head div#nav ul { float:right; }
-div#head div#nav ul li { font-family: 'ttf1942report'; color:#9F0002; float:left; margin:0 10px 0 0; border-bottom: solid 1px #777777; }
-div#head div#nav ul li a { font-family: 'ttf1942report'; text-decoration:none; color: #9F0002; }
-div#head div#nav ul li a:hover { color: #CCCCCC; border:none; }
-*/
-
 /* MAIN */
 div#main { }
 

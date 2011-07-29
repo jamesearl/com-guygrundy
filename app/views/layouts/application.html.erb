@@ -20,6 +20,10 @@
   
   <%= render 'shared/tracking'%>
   
+  <%if request.subdomain=='blog'%>
+  <%=auto_discovery_link_tag :rss, rss_url%>
+  <%end%>
+  
   <%= csrf_meta_tag %>
 </head>
 <body>

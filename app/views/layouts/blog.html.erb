@@ -1,70 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<!-- blog subdomain -->
-	<title>Grundy's Blog<%=@page_title.blank? ? "" : " - #{@page_title}"%></title>
 
-  <%= stylesheet_link_tag 'http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css'%>
-  <%= stylesheet_link_tag 'http://yui.yahooapis.com/3.3.0/build/cssgrids/grids-min.css'%>
-  <%= stylesheet_link_tag 'application'%>
-  <%= stylesheet_link_tag 'blog' %>
-  <%= yield :style %>
-
-  <%=auto_discovery_link_tag :rss, rss_url%>
-  
-  <%= javascript_include_tag 'https://apis.google.com/js/plusone.js'%>
-	<%= javascript_include_tag 'prototype' %>
-  <%= javascript_include_tag 'blog' %>
-  
-  
-<%if @show_tracking%>
-	<%= render 'blog/shared/tracking'%>
+<%=content_for :title do%>
+Grundy's Blog<%=@page_title.blank? ? "" : " - #{@page_title}"%>
 <%end%>
-  
-  <%= yield :script %>
-  
-  <%= csrf_meta_tag %>
-</head>
-<body>
-	<%= render 'shared/navigation'%>
 
-	<div class="yui3-g" id="layout">
-		<div class="yui3-u" id="layout-left">
-			<div class="leftborder backborder"></div>
-		</div>
-		
-		<div class="yui3-u" id="layout-right">
-			<div class="yui3-g" id="head">
-				<div class="yui3-u-1-2">
-					<%= render 'blog/shared/logo'%>
-				</div>
-				<div class="yui3-u-1-2">
-					
-				</div>
-			</div>
-		
-			<div class="yui3-g">
-				<div class="yui3-u-5-8">
-					<div class="content" id="main">
-						<%==show_flash%>
-						<%= yield :main%>
-					</div>
-				</div>
-				<div class="yui3-u-3-8">
-					<div class="content" id="sidebar">
-						<%= render 'blog/shared/sidebar'%>
-					</div>
-				</div>
-			</div>
-			
-			<div class="yui3-g">
-				<div class="yui3-u">
-					<%#= render 'blog/shared/footer'%>
-				</div>
-			</div>
-		</div>
+<%=content_for :content do%>
+<div class="yui3-u-5-8">
+	<div class="content" id="main">
+		<%==show_flash%>
+		<%= yield :main%>
 	</div>
-		
-	<%= render 'shared/subdomain_navigation'%>
-</body>
-</html>
+</div>
+<div class="yui3-u-3-8">
+	<div class="content" id="sidebar">
+		<%= render 'blog/shared/sidebar'%>
+	</div>
+</div>
+<%end%>
+
+<%= render :file=>'layouts/application'%>

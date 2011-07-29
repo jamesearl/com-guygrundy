@@ -25,21 +25,19 @@
 <%end%>
 
 <%if request.subdomain=='blog'%>
-	<div class="nav">
-		<ul>
-			<li>
-				<%if @current_user && @current_user.is_admin%>
-					<%=link_to 'new post', posts_new_url%>
+	<ul>
+		<li>
+			<%if @current_user && @current_user.is_admin%>
+				<%=link_to 'new post', posts_new_url%>
+			<%end%>
+		</li>
+		
+		<li>
+				<%if @current_user%>
+					<%=link_to 'logout', logout_url%>
+				<%else%>
+					<%=link_to 'login', login_url%>
 				<%end%>
-			</li>
-			
-			<li>
-					<%if @current_user%>
-						<%=link_to 'logout', logout_url%>
-					<%else%>
-						<%=link_to 'login', login_url%>
-					<%end%>
-			</li>
-		</ul>
-	</div>
+		</li>
+	</ul>
 <%end%>

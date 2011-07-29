@@ -10,32 +10,27 @@
   <%= stylesheet_link_tag 'http://yui.yahooapis.com/3.3.0/build/cssgrids/grids-min.css'%>
   <%= stylesheet_link_tag 'application'%>
   <%= stylesheet_link_tag "#{request.subdomain}" %>
-  <%= yield :style %>
+  <%= content_for?(:style) ? yield(:style) : yield %>
 
 	<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js' %>
 	<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js' %>
   <%= javascript_include_tag 'https://apis.google.com/js/plusone.js'%>
   <%= javascript_include_tag "#{request.subdomain}" %>
-  <%= yield :script %>
+  <%= content_for(:script) ? yield(:script) : yield %>
   
   <%= render 'shared/tracking'%>
   
   <%= csrf_meta_tag %>
 </head>
 <body>
-
 	<%=render 'shared/header'%>
-
 	<%=render 'shared/social'%>
 	
 	<div class="yui3-g" id="layout">
-	
 		<%= content_for?(:content) ? yield(:content) : yield%>
-		
 	</div>
 	
 	<%= render 'shared/browser_compat'%>
-	
 	<%= render 'shared/subdomain_navigation'%>
 </body>
 </html>

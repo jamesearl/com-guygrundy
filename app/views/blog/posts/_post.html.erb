@@ -14,14 +14,6 @@
 		by <%=link_to @post.user.alias, user_posts_url(@post.user)%> on <%=post.created_at.strftime("%m/%d/%Y at %I:%M%p")%> 
 	</p>
 	
-	<div class="social">
-		<div class="soc date">Share this:</div> 
-		<%=render :partial=>'blog/shared/twitter_tweet'%>
-		<%=render :partial=>'blog/shared/google_plus1'%>
-		<%=render :partial=>'blog/shared/facebook_like'%>
-	</div>
-	
-
 	<div class="body">
 		<%==post.body%>
 	</div>

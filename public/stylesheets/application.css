@@ -33,7 +33,7 @@ h1 { font-family: 'ttf1942report'; font-size:40px; }
 h2 { font-family: 'ttf1942report'; font-size: 22px; font-weight:bold; margin:0 0 10px 0; }
 
 /* HEADER */
-div#header { position:fixed; top:0; left:0; width:100%; background-color:#333333; border-bottom:solid 8px #222222; }
+div#header { position:fixed; top:0; left:0; width:100%; background-color:#333333; border-bottom:solid 8px #222222; z-index:2; }
 div#header div#logo { float:left; color:#9F0002; }
 div#header div#logo h1 { font-size: 45px; }
 div#header ul { float:right; margin: 20px 10px 0 0; }

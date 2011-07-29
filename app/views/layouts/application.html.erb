@@ -2,7 +2,9 @@
 <html>
 <head>
 	<!-- <%=request.subdomain%> subdomain -->
-  <title>Guy Grundy - Training<%=@page_title.blank? ? "" : " - #{@page_title}"%></title>
+  <title>
+  	<%= content_for?(:title) ? yield(:title) : yield%>
+	</title>
   
   <%= stylesheet_link_tag 'http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css'%>
   <%= stylesheet_link_tag 'http://yui.yahooapis.com/3.3.0/build/cssgrids/grids-min.css'%>
@@ -28,15 +30,7 @@
 	
 	<div class="yui3-g" id="layout">
 	
-		<%= content_for?(:content) ? yield :content : yield%>
-	
-		<div class="yui3-u-1">
-			<div class="content">
-				<div id="page-title"><%=@page_title%></div>
-				<%==show_flash%>
-				<%= yield :main%>
-			</div>
-		</div>
+		<%= content_for?(:content) ? yield(:content) : yield%>
 		
 	</div>
 	

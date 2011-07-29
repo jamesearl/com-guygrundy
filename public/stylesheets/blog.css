@@ -1,6 +1,6 @@
 
 /* LAYOUT */
-div#layout { padding:10px; margin: 100px auto 80px auto; width:800px; min-height:500px; background-color:#333333; border: solid 8px #222222; }
+div#layout { padding:10px; margin: 100px auto 80px auto; width:950px; min-height:500px; background-color:#333333; border: solid 8px #222222; }
 
 /* MAIN */
 div#main { }
@@ -10,7 +10,7 @@ div#post div.field textarea { width: 95%; }
 div#post div.field input { }
 div#post div.actions { margin:1em 0 0 0; }
 
-div#post { margin: 0 0 10px 0; padding: 15px; position:relative; }
+div#post { margin: 0 0 10px 0; padding: 0 15px 15px 15px; position:relative; }
 div#post p.title { font-weight: bold; font-size: 17px; }
 div#post p.title a { text-decoration: none; }
 div#post .date { color:#AAAAAA; }
@@ -48,7 +48,7 @@ div#login { margin: 0 auto; }
 /* SIDEBAR */
 
 div#sidebar {  }
-div#sidebar div { margin:0 0 10px 0; }
+div#sidebar div { margin:0 0 20px 0; }
 div#sidebar div#author { border-bottom: solid 1px #333333; font-size:14px; }
 div#sidebar div#author img { float:right; margin:0 0 5px 10px; }
 /*div#sidebar div#social { border-bottom: solid 1px #333333; }*/

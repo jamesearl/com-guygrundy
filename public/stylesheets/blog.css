@@ -10,7 +10,7 @@ div#post div.field textarea { width: 95%; }
 div#post div.field input { }
 div#post div.actions { margin:1em 0 0 0; }
 
-div#post { margin: 0 0 10px 0; padding: 0 15px 15px 15px; position:relative; }
+div#post { margin: 0 0 10px 0; padding: 0 15px 15px 15px; position:relative; border-right: dashed 1px #444444; }
 div#post p.title { font-weight: bold; font-size: 17px; }
 div#post p.title a { text-decoration: none; }
 div#post .date { color:#AAAAAA; }

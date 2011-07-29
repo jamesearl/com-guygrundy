@@ -26,11 +26,15 @@
 
 <%if request.subdomain=='blog'%>
 	<ul>
+		<li><%=link_to_unless_current 'posts', blog_posts_url%></li>
+		<li>-</li>
+		
+		<%if @current_user && @current_user.is_admin%>
 		<li>
-			<%if @current_user && @current_user.is_admin%>
 				<%=link_to 'new post', posts_new_url%>
-			<%end%>
 		</li>
+		<li>-</li>
+		<%end%>
 		
 		<li>
 				<%if @current_user%>

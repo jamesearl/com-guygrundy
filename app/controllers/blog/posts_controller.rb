@@ -38,7 +38,7 @@ class Blog::PostsController < Blog::BaseController
 		@post.user = @current_user
 		respond_to do |format|
 			if @post.save
-				format.html { redirect_to post_slug_url(:id=>@post.id, :slug=>@post.slug), :notice=> "Post successfully created." }
+				format.html { redirect_to blog_post_slug_url(:id=>@post.id, :slug=>@post.slug), :notice=> "Post successfully created." }
 			else
 				format.html {render :action=>"new"}
 			end

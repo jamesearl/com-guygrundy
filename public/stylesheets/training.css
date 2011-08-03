@@ -5,6 +5,14 @@ div#layout div.content {  }
 div#page-title { font-family: 'ttf1942report'; font-size:20px; color:#777777; float:left; text-transform:lowercase; width:100%; height:40px; }
 
 div#about { padding:20px; }
+div#about h2 { font-family:inherit; font-size:18px; }
+div#about h3 { font-size:16px; font-weight:bold; }
+div#about span { font-weight:bold; }
+div#about p { margin:0 0 10px 0; }
+div#about p em { font-style:italic; }
+div#about div { width:auto; margin:0 auto; height:270px; text-align:center; }
+div#about div img { width: 40%; }
+div#about div div { width: 50%; float:left; background-color:#444444; }
 
 div#contact { padding:20px; text-align:center; }
 div#contact p { margin:70px auto 20px auto; }

@@ -8,12 +8,29 @@ div#about { padding:20px; }
 div#about h2 { font-family:inherit; font-size:18px; }
 div#about h3 { font-size:16px; font-weight:bold; }
 div#about h3 em { font-weight:bold; font-style:italic; }
+div#about h3.center { text-align:center; }
+
 div#about span { display:block; font-weight:bold; }
-div#about p { margin:0 0 15px 0; clear:both; }
+
+div#about p { margin:0 0 0 0; clear:none; }
 div#about p em { font-style:italic; }
-div#about div { width:auto; margin:0 auto; height:300px; text-align:center; width:100%; clear:both; }
-div#about div img { height:220px; }
-div#about div div { width: 40%; float:left; height:270px; margin-left:40px; background-color:#444444; clear:none; }
+
+div#about div { width:auto; }
+div#about div span { width:100%; }
+div#about div p { margin:0 0 15px 0; clear:none; font-weight:normal; }
+
+div#about span.quote { margin:15px; padding:5px; background-color: #222222; border:solid 1px #444444; text-align:center; font-weight:normal; font-style:italic; font-size:13px; }
+
+div#about div.q { margin-bottom:5px; padding:10px; }
+div#about div.q span { }
+div#about div.q span:hover { color:#9F0002; cursor:pointer; }
+div#about div.q p { font-weight:normal; }
+
+div#about div.creators { text-align:center; float:right; clear:none; }
+div#about div.creators img { height:220px; }
+div#about div.creators div { width: auto; float:left; height:230px; padding:30px; margin:10px 0 0 40px; background-color:#444444; clear:none; }
+div#about div.creators div h2 { font-size:16px; }
+div#about div.creators div h2 a { text-decoration:none; }
 
 div#contact { padding:20px; text-align:center; }
 div#contact p { margin:70px auto 20px auto; }

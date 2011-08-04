@@ -50,6 +50,10 @@ ComGuygrundy::Application.routes.draw do
 		
 	end
 	
+	scope :shop, :constraints => {:subdomain=>'shop', :protocol=>'https'} do
+		
+	end
+	
 	# SHARED PAGES
 	match '/contact'		=> 'contact#index', :as=>:contact
 	

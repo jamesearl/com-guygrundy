@@ -1,8 +1,10 @@
 <div id="sidebarads">
-	<%#<h2>Advertisements</h2>%>
-	<div>
+	
 	<%unless ENV['RAILS_ENV']=='development'%>
+	<h2>Advertisements</h2>
+	<div>
 		<%= render :partial=>'blog/ads/adbrite_square'%>
-	<%end%>
 	</div>
+	<%end%>
+	
 </div>

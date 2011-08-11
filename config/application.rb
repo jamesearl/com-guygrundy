@@ -38,5 +38,8 @@ module ComGuygrundy
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    
+    #merged with ../initializers/secret_token.rb
+    config.secret_token = (1..4).map{ Digest::SHA1.hexdigest [Time.now, (1..10).map{rand.to_s}].flatten.join }.flatten.join
   end
 end

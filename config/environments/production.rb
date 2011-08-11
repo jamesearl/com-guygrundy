@@ -46,4 +46,7 @@ ComGuygrundy::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  #merged with ../initializers/secret_token.rb
+  config.secret_token = ENV["SECRET_TOKEN"] #heroku
 end

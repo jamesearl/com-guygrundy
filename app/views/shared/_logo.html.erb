@@ -3,7 +3,7 @@
 		<%=link_to 'Guy Grundy ', root_url%>
 		
 		<%if request.subdomain=='www'%>
-			<%=link_to 'Acting', root_url, :class=>"red"%>
+			<%=link_to 'Actor', root_url, :class=>"red"%>
 		<%else%>
 			<%=link_to "#{request.subdomain.capitalize}", root_url, :class=>"red"%>
 		<%end%>

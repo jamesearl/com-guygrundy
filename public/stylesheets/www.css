@@ -38,5 +38,8 @@ div#photos div a { display:inline; float:left; }
 div#photos div a img { height:100px; margin:7px 7px 7px 7px; vertical-align:top; border:solid 1px transparent;}
 div#photos div a img:hover { border-bottom:solid 1px #333333; border-right: solid 1px #333333; }
 
-div#contact { height: 400px; }
-
+div#contact { padding:20px; text-align:center; }
+div#contact p { margin:70px auto 20px auto; }
+div#contact a { display:inline-block; width: 70px; height:70px; margin:10px; }
+div#contact a:hover { background-color:#393939; }
+div#contact a img { width:60px; height:60px; margin:5px; text-align:center; vertical-align:middle; }

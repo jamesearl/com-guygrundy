@@ -34,7 +34,7 @@ div#resume div p { display:block; clear:right; margin-left: 200px; }
 
 div#photos div { margin:0 0 40 10px; }
 div#photos div span {  }
-div#photos div a { display:inline; float:left; }
+div#photos div a { display:inline; }
 div#photos div a img { height:100px; margin:7px 7px 7px 7px; vertical-align:top; border:solid 1px transparent;}
 div#photos div a img:hover { border-bottom:solid 1px #333333; border-right: solid 1px #333333; }
 

@@ -5,7 +5,7 @@
 
 <%=content_for :content do %>
 	<div class="yui3-u-1">
-		<div class="content">
+		<div class="content" id="main">
 			<div id="page-title"><%=@page_title%></div>
 			<%==show_flash%>
 			<%= content_for?(:main) ? yield(:main) : yield%>

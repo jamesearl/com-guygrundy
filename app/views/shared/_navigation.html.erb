@@ -1,17 +1,17 @@
 
 <%if request.subdomain=='www'%>
 	<ul>
-		<li><%=link_to 'news', news_url%></li>
+		<li><%=link_to_unless_current 'news', news_url%></li>
 		<li>-</li>
-		<li><%=link_to 'reel', reel_url%></li>
+		<li><%=link_to_unless_current 'reel', reel_url%></li>
 		<li>-</li>
-		<li><%=link_to 'bio', biography_url%></li>
+		<li><%=link_to_unless_current 'bio', biography_url%></li>
 		<li>-</li>
-		<li><%=link_to 'resume', resume_url%></li>
+		<li><%=link_to_unless_current 'resume', resume_url%></li>
 		<li>-</li>
-		<li><%=link_to 'photos', photos_url%></li>
+		<li><%=link_to_unless_current 'photos', photos_url%></li>
 		<li>-</li>
-		<li><%=link_to 'contact', contact_url%></li>
+		<li><%=link_to_unless_current 'contact', contact_url%></li>
 	</ul>
 <%end%>
 

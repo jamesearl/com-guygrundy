@@ -8,7 +8,7 @@ div#about { padding:20px; }
 div#about h2 { font-family:inherit; font-size:18px; }
 div#about h3 { font-size:16px; font-weight:bold; }
 div#about h3 em { font-weight:bold; font-style:italic; }
-div#about h3.center { text-align:center; }
+div#about h3.center { text-align:center; clear:none; }
 div#about span { display:block; font-weight:bold; }
 div#about p { margin:0 0 0 0; clear:none; }
 div#about p em { font-style:italic; }
@@ -25,6 +25,7 @@ div#about div.creators img { height:220px; }
 div#about div.creators div { width: auto; float:left; height:230px; padding:30px; margin:10px 0 0 40px; background-color:#444444; clear:none; }
 div#about div.creators div h2 { font-size:16px; }
 div#about div.creators div h2 a { text-decoration:none; }
+div#about div.youtube { float:right; height:250px; padding:10px; background-color:#444444; }
 
 div#contact { padding:20px; text-align:center; }
 div#contact p { margin:70px auto 20px auto; }

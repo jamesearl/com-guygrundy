@@ -43,11 +43,11 @@ ComGuygrundy::Application.routes.draw do
 	
 	scope :training, :constraints => {:subdomain=>'training'} do
 		
-		match '/biography' 	=> 'training/biography#index',	:as=>:training_biography
+		match '/biography' 		=> 'training/biography#index',		:as=>:training_biography
 		match '/contact' 		=> 'training/contact#index',		:as=>:training_contact
 		match '/about' 			=> 'training/about#index',			:as=>:training_about
 		match '/resume'			=> 'training/resume#index', 		:as=>:training_resume
-		
+		match '/rates'			=> 'training/about#rates',			:as=>:training_rates
 	end
 	
 	scope :shop, :constraints => {:subdomain=>'shop', :protocol=>'https'} do

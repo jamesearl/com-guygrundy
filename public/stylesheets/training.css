@@ -1,5 +1,5 @@
 
-div#layout { padding:10px; margin: 100px auto 80px auto; width:800px; min-height:500px; background-color:#333333; border: solid 8px #222222; font-size:14px; }
+div#layout { padding:10px; margin: 100px auto 80px auto; width:800px; min-height:500px; background-color:#333333; border: solid 8px #222222; }
 div#layout div.content {  }
 
 div#page-title { font-family: 'ttf1942report'; font-size:20px; color:#777777; float:left; text-transform:lowercase; width:100%; height:40px; }

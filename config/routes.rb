@@ -5,7 +5,7 @@ ComGuygrundy::Application.routes.draw do
 		match '/about' 			=> 'www/about#index'
 		match '/news' 			=> 'www/news#index'
 		match '/reel' 			=> 'www/reel#index', :via=>:get, :as=>:reel
-		match '/biography' 	=> 'www/biography#index'
+		match '/biography' 		=> 'www/biography#index'
 		match '/resume' 		=> 'www/resume#index'
 		match '/photos' 		=> 'www/photos#index'
 		match '/contact' 		=> 'www/contact#index'
@@ -48,6 +48,11 @@ ComGuygrundy::Application.routes.draw do
 		match '/about' 			=> 'training/about#index',			:as=>:training_about
 		match '/resume'			=> 'training/resume#index', 		:as=>:training_resume
 		match '/rates'			=> 'training/about#rates',			:as=>:training_rates
+
+		if ENV["RAILS_ENV"] == 'development'
+			match '/consulting'		=> 'training/about#consulting',		:as=>:training_consulting
+			match '/news'			=> 'training/about#news',			:as=>:training_news
+		end
 	end
 	
 	scope :shop, :constraints => {:subdomain=>'shop', :protocol=>'https'} do

@@ -60,5 +60,16 @@ div#news { padding:20px; }
 div#news div { padding:0 0 20px 0; }
 div#news div span { }
 
-
-
+div#consulting { padding:20px; }
+div#consulting h2 { font-family:inherit; font-size:18px; }
+div#consulting h3 { font-size:16px; font-weight:bold; padding:10px 0 10px 0;}
+div#consulting p { margin:0 0 0 0; }
+div#consulting p span { font-weight:bold; display:block; }
+div#consulting a { display:block; clear:both; text-align:center; margin:10px; font-weight:bold;}
+div#consulting div { margin:20px; clear:both; }
+div#consulting div ul { margin:10px; }
+div#consulting div ul li { display:inline; width:50%; float:left; font-weight:bold; }
+div#consulting div.methods ul li { width:32%; }
+div#consulting div ul li ul { width:100%; font-weight:normal; }
+div#consulting div ul li ul li { display:block; float:none; width:100%; font-weight:normal;}
+div#consulting div.methods ul li ul li{ width:100%; }

@@ -51,6 +51,7 @@ div#resume div ul li { list-style:disc outside; margin:0 0 0 15px; }
 
 div#rates { padding:20px; }
 div#rates h3 { font-size:16px; font-weight:bold; }
+div#rates h4 { font-size:15px; font-weight:bold; }
 div#rates div { margin:20px 0 20px 0; }
 div#rates div span { font-weight:bold; }
 div#rates div p { padding: 10px; border-left: solid 1px #2B2B2B;  }

@@ -49,10 +49,8 @@ ComGuygrundy::Application.routes.draw do
 		match '/resume'			=> 'training/resume#index', 		:as=>:training_resume
 		match '/rates'			=> 'training/about#rates',			:as=>:training_rates
 
-		if ENV["RAILS_ENV"] == 'development'
-			match '/consulting'		=> 'training/about#consulting',		:as=>:training_consulting
-			match '/news'			=> 'training/about#news',			:as=>:training_news
-		end
+		match '/consulting'		=> 'training/about#consulting',		:as=>:training_consulting
+		match '/news'			=> 'training/about#news',			:as=>:training_news
 	end
 	
 	scope :shop, :constraints => {:subdomain=>'shop', :protocol=>'https'} do

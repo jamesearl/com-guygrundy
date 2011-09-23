@@ -19,20 +19,16 @@
 	<ul>
 		<li><%=link_to_unless_current 'about', training_about_url%></li>
 		<li>-</li>
+		<li><%=link_to_unless_current 'consulting', training_consulting_url%></li>
+		<li>-</li>
 		<li><%=link_to_unless_current 'rates', training_rates_url%></li>
 		<li>-</li>
 		<li><%=link_to_unless_current 'bio', training_biography_url%></li>
 		<li>-</li>
 		<li><%=link_to_unless_current 'resume', training_resume_url%><%#\u00E9%></li>
 		<li>-</li>
-
-		<%if ENV["RAILS_ENV"]=='development'%>
-			<li><%=link_to_unless_current 'news', training_news_url%></li>
-			<li>-</li>
-			<li><%=link_to_unless_current 'consulting', training_consulting_url%></li>
-			<li>-</li>
-		<%end%>
-		
+		<li><%=link_to_unless_current 'news', training_news_url%></li>
+		<li>-</li>
 		<li><%=link_to_unless_current 'contact', training_contact_url%></li>
 	</ul>
 <%end%>

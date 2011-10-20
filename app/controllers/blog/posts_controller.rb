@@ -34,6 +34,7 @@ class Blog::PostsController < Blog::BaseController
 	end
 	
 	def create
+		return unless @current_user && @current_user.is_admin
 		@post = Blog::Post.new(params[:blog_post])
 		@post.user = @current_user
 		respond_to do |format|
@@ -46,6 +47,7 @@ class Blog::PostsController < Blog::BaseController
 	end
 	
 	def new
+		return unless @current_user && @current_user.is_admin
 		@post = Blog::Post.new
 	end
 	
@@ -56,6 +58,7 @@ class Blog::PostsController < Blog::BaseController
 	end
 	
 	def update
+		return unless @current_user && @current_user.is_admin
 		respond_to do |format|
 			if @post.update_attributes(params[:blog_post])
 				format.html {redirect_to edit_post_url(@post), :notice=> "Post successfully updated."}
@@ -69,6 +72,7 @@ class Blog::PostsController < Blog::BaseController
 	end
 	
 	def update_title
+		return unless @current_user && @current_user.is_admin
 		@post.title = params[:value]
 		@post.save
 		
